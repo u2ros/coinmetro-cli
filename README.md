@@ -22,7 +22,7 @@ This will install Coinmetro CLI as a global command. You can then use your termi
 
 ### Binaries
 
-Binaries are packaged using [pkg](https://github.com/zeit/pkg) utility. Look under releases to download the release for your platform. Rename the downloaded executable into cm (or cm.exe on windows) and place it into your PATH variable, or cd your terminal to the same folder where you unpacked and renamed your cm(.exe) executable.
+Binaries are packaged using [pkg](https://github.com/zeit/pkg) utility. Look under releases to download the release for your platform. Rename the downloaded executable into cm (or cm.exe on windows) and place it somewhere on your PATH, or cd your terminal to the same folder where you unpacked and renamed your cm(.exe) executable.
 
 ## Usage
 
@@ -69,7 +69,7 @@ An error message will be printed and here are the most common error messages and
 
 ## Roadmap
 
-No particular roadmap atm. There's some due diligence (code cleanup, tests). Feature wise I will add/change/remove features as i converge on typical use patterns. All orders that are created with this app are limit orders as I don't see much point in adding market orders at the moment. At the moment i also ignore TraM orders even if you specify tram as a product for listing orders. Feel free to open a feature request or report a bug by opening an issue on github.
+No particular roadmap atm. There's some due diligence (code cleanup, tests, refactor). Feature wise I will add/change/remove features as i converge on typical use patterns. All orders that are created with this app are limit orders as I don't see much point in adding market orders at the moment. I also ignore TraM orders even if you specify tram as a product for listing orders. Feel free to open a feature request or report a bug by opening an issue on github.
 
 ## Command reference
 
@@ -331,6 +331,7 @@ Cancel multiple orders that fit specific criteria
 
 ```
     Example:
-    cm order mcancel xcmeur <byprice> @0.03-0.04                       // cancel all open xcmeur orders between 3 and 4c
-    cm order mcancel xcmeur <bydate> 2020-01-07 7:00 2020-01-09 12:00  // cancel all open xcmeur order placed between specified dates
+    cm order mcancel xcmeur                                          // cancel all open xcmeur orders
+    cm order mcancel xcmeur byprice @0.03-0.04                       // cancel all open xcmeur orders between 3 and 4c
+    cm order mcancel xcmeur bydate 2020-01-07 7:00 2020-01-09 12:00  // cancel all open xcmeur order placed between specified dates
 ```

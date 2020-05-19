@@ -326,7 +326,15 @@ Cancel multiple orders that fit specific criteria
 
 ```
     Syntax:
-    cm order mcancel <pair> [<mode byprice|bydate> @<start price>-<end price>|<start date YYYY-MM-DD> <start time hh:mm> <end date>]YYYY-MM-DD> <end time hh:mm>
+    cm order mcancel <pair> [<mode byprice|bydate> @<start price>-<end price>|<start date YYYY-MM-DD> <start time hh:mm> <end date>YYYY-MM-DD> <end time hh:mm>]
+
+    pair       : required
+    mode       : optional, 'byprice' or 'bydate'. This governs the use of additional args below
+    price      : required if mode byprice is specified. Price is passed in the format '@<start price><end price>'
+    start date : required if mode bydate is specified. Format is YYYY-MM-DD
+    start time : required if mode bydate is specified. Format is hh:mm
+    end date   : required if mode bydate is specified. Format is YYYY-MM-DD
+    end time   : required if mode bydate is specified. Format is hh:mm
 ```
 
 ```

@@ -326,7 +326,7 @@ Cancel multiple orders that fit specific criteria
 
 ```
     Syntax:
-    cm order mcancel <pair> <mode byprice|bydate> @<start price>-<end price>|<start date YYYY-MM-DD> <start time hh:mm> <end date YYYY-MM-DD> <end time hh:mm>
+    cm order mcancel <pair> [<mode byprice|bydate> @<start price>-<end price>|<start date YYYY-MM-DD> <start time hh:mm> <end date>]YYYY-MM-DD> <end time hh:mm>
 ```
 
 ```

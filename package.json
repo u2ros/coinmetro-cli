@@ -1,0 +1,42 @@
+{
+  "name": "coinmetro-cli",
+  "version": "1.0.0",
+  "description": "Coinmetro CLI interface by u2ros",
+  "main": "index.js",
+  "scripts": {
+    "build": "pkg package.json --out-path dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u2ros/coinmetro-cli.git"
+  },
+  "keywords": [
+    "coinmetro",
+    "crypto",
+    "exchange",
+    "cli"
+  ],
+  "author": "Uros Bernik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/u2ros/coinmetro-cli/issues"
+  },
+  "homepage": "https://github.com/u2ros/coinmetro-cli#readme",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "asciichart": "^1.5.17",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "enquirer": "^2.3.5",
+    "yargs": "^15.3.1"
+  },
+  "bin": {
+    "cm": "./bin/cm.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  },
+  "pkg": {
+    "scripts": "lib/*.js"
+  }
+}

@@ -26,7 +26,9 @@ This will install Coinmetro CLI as a global command. You can then use your termi
 
 ### Binaries
 
-Binaries are packaged using [pkg](https://github.com/zeit/pkg) utility. Look under releases to download the release for your platform. Rename the downloaded executable into cm (or cm.exe on windows) and place it somewhere on your PATH, or cd your terminal to the same folder where you unpacked and renamed your cm(.exe) executable.
+Binaries are packaged using [pkg](https://github.com/zeit/pkg) utility. Look under [releases](https://github.com/u2ros/coinmetro-cli/releases) to download the release for your platform. Rename the downloaded executable into cm (or cm.exe on windows) and place it somewhere on your PATH, or cd your terminal to the same folder where you unpacked and renamed your cm(.exe) executable.
+
+<p style="color: red; font-weight: bold;">IMPORTANT: Always use binaries you downloaded from this site. Never use any third party download links!!!</p>
 
 ## Usage
 

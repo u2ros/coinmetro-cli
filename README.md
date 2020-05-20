@@ -99,7 +99,7 @@ Here is a list of available commands.
 
 ### <a name="auth-demo"></a> cm auth demo
 
-Change to demo mode. After activating the demo mode, you need to update your login token using [cm auth login command](#authlogin).
+Change to demo mode. After activating the demo mode, you need to update your login token using [cm auth login command](#auth-login).
 
 ```
     Syntax:
@@ -111,7 +111,7 @@ Change to demo mode. After activating the demo mode, you need to update your log
 
 ### <a name="auth-live"></a> cm auth live
 
-Change to live mode. After activating the live mode, you need to update your login token using [cm auth login command](#authlogin).
+Change to live mode. After activating the live mode, you need to update your login token using [cm auth login command](#auth-login).
 
 ```
     Syntax:

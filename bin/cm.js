@@ -9,7 +9,7 @@ const argv = require('yargs').argv
 
 if (argv._.length == 0) {
   console.log(c.red('Missing command argument'))
-  exit(1)
+  process.exit(1)
 }
 const command = argv._[0]
 const subcommand = argv._[1]

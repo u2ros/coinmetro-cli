@@ -87,6 +87,7 @@ Here is a list of available commands.
 - [cm balance list](#balance-list) - list your balances
 - [cm market list](#market-list) - list available markets (pairs)
 - [cm market chart](#market-chart) - draw a market chart
+- [cm market trades](#market-trades) - list recent market trades
 - [cm market book](#market-book) - display market order book
 - [cm order list](#order-list) - list open orders
 - [sm order history](#order-history) - list closed orders
@@ -181,6 +182,23 @@ Display a price chart for the specified pair and timeframe
 ```
     Example:
     cm market chart btceur d // display bitcoin market chart for last 24 hours
+```
+
+### <a name="market-trades"></a> cm market trades
+Display current order book of a specific market
+
+```
+    Syntax:
+    cm market trades <pair> [<date YYYY-MM-HH> <time h:mm:ss>]
+
+    pair     : required
+    date     : list trades since this date, default 1 day
+    time     : list trades since this time within date, default 0:00:00 (midnight)
+```
+
+```
+    Example:
+    cm market trades btceur // display trades on btceur market within last 24 hours
 ```
 
 ### <a name="market-book"></a> cm market book

@@ -39,7 +39,30 @@ Coinmetro-CLI will start in demo mode by default. If you want to use it with you
     cm auth login <your email> <your password>    // login to update accesss token
 ```
 
-The syntax of commands follows this convention:
+Using the new cmd module (v0.3.0) you can store and chain commands for later use like so:
+
+```
+    cm cmd store "cm auth demo && cm auth login myname@blabla.com mypass" demo
+    cm cmd store "cm auth live && cm auth login myname@blabla.com mypass" live
+```
+
+To login to either live or demo mode, you can then use:
+
+```
+    cm cmd run demo // this will enable demo mode and log you in as specified in the command definition above
+    cm cmd run live // this will enable live mode and log you in as specified in the command definition above
+```
+
+You could create an overview of a specific market with these commands:
+
+```
+    cm cmd store "cm market chart xcmeur d && cm market book xcmeur 10 && cm market trades xcmeur " xcmeur
+
+    //then run it anytime using
+    cm cmd run xcmeur
+```
+
+The syntax of base commands follows this convention:
 
 ```
     cm <command> <subcommand> [<args>]

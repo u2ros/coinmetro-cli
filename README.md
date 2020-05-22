@@ -44,6 +44,8 @@ Using the new cmd module (v0.3.0) you can store and chain commands for later use
 ```
     cm cmd store "cm auth demo && cm auth login myname@blabla.com mypass" demo
     cm cmd store "cm auth live && cm auth login myname@blabla.com mypass" live
+
+    // Warning: These particular commands will also store your credentials in plain text, so use with caution
 ```
 
 To login to either live or demo mode, you can then use:

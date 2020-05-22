@@ -2,7 +2,7 @@
 
 ![Chart](./docs/media/chart.jpg)
 
-![Chart](./docs/media/book.jpg)
+![Book](./docs/media/book.jpg)
 
 A little side project i made in my spare time (and still a work in progress) for accessing Coinmetro Crypto Exchange using the terminal.
 
@@ -97,6 +97,10 @@ Here is a list of available commands.
 - [cm order msell](#order-msell) - place a multi sell (iceberg) order
 - [cm order cancel](#order-cancel) - cancel a single order using order id
 - [cm order mcancel](#order-mcancel) - cancel multiple orders using criteria
+- [cm cmd list](#cmd-list) - list all stored commands
+- [cm cmd store](#cmd-store) - store a new command
+- [cm cmd del](#cmd-del) - delete a stored command
+- [cm cmd run](#cmd-run) - run a stored command
 
 ### <a name="auth-demo"></a> cm auth demo
 
@@ -364,6 +368,65 @@ Cancel multiple orders that fit specific criteria
 ```
     Example:
     cm order mcancel xcmeur                                          // cancel all open xcmeur orders
-    cm order mcancel xcmeur byprice @0.03-0.04                       // cancel all open xcmeur orders between 3 and 4c
+    cm order mcancel xcmeur byprmarkete @0.03-0.04                   // cancel all open xcmeur orders between 3 and 4c
     cm order mcancel xcmeur bydate 2020-01-07 7:00 2020-01-09 12:00  // cancel all open xcmeur order placed between specified dates
+```
+### <a name="cmd-list"></a> cm cmd list
+Display a list of currently stored commands
+
+```
+    Syntax:
+    cm cmd list
+```
+
+```
+    Example:
+    cm cmd list
+```
+
+### <a name="cmd-store"></a> cm cmd store
+Store a command or a chain of commands for later use. Important: Command must be specified inside single or double quotes!
+
+```
+    Syntax:
+    cm cmd store "<command>" <name>
+
+    command  : required, actual command enclosed in double or single quotes
+    name     : required, shorthand name which will be used for running the command
+```
+
+```
+    Example:
+    cm cmd store "cm auth login whale@gmail.com pumpndump" login     // this stores a login command
+    cm cmd store "cm market chart xcmeur && cm market chart btceur"  // this stores a chain of 2 commands (&& is used on Linux to combine multiple commands inline)
+```
+
+### <a name="cmd-del"></a> cm cmd del
+Deletes a previously stored command
+
+```
+    Syntax:
+    cm cmd del <name>
+
+    name     : required, name (shorthand) of command to delete
+```
+
+```
+    Example:
+    cm cmd del mycmd2  // deletes a command called mycmd2
+```
+
+### <a name="cmd-run"></a> cm cmd run
+Run a command using its shorthand name
+
+```
+    Syntax:
+    cm cmd run <name>
+
+    name     : required, shorthand name of the command you want to run
+```
+
+```
+    Example:
+    cm cmd run mylogincmd   // this will run a command called mylogincmd which will presumably perform the login
 ```

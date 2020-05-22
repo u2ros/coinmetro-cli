@@ -1,6 +1,6 @@
 {
   "name": "coinmetro-cli",
-  "version": "1.0.0",
+  "version": "0.3.2",
   "description": "Coinmetro CLI interface by u2ros",
   "main": "index.js",
   "scripts": {

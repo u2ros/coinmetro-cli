@@ -19,7 +19,10 @@ auth.check(command, subcommand)
   const api = require('../lib/api')(process.env.demo === 'true')
   let context
   try { context = require(`../lib/${command}.js`) }
-  catch (err) { throw `Invalid base command '${command}'` }
+  catch (err) { 
+    console.log(err)
+    throw `Invalid base command '${command}'`
+  }
 
   if (!context[subcommand]) throw `Invalid subcommand for command '${command}'`
 

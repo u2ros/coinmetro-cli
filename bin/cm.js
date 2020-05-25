@@ -3,7 +3,7 @@
 const c = require('ansi-colors')
 const auth = require('../lib/auth')
 const utils = require('../lib/utils')
-require('dotenv').config()
+const env = require('../lib/env')
 
 const argv = require('yargs').argv
 
@@ -16,7 +16,7 @@ const subcommand = argv._[1]
 
 auth.check(command, subcommand)
 .then(() => {
-  const api = require('../lib/api')(process.env.demo === 'true')
+  const api = require('../lib/api')(env.val('demo') === 'true')
   let context
   try { context = require(`../lib/${command}.js`) }
   catch (err) { 

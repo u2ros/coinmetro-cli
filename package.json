@@ -26,7 +26,6 @@
     "ansi-colors": "^4.1.1",
     "asciichart": "^1.5.17",
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
     "enquirer": "^2.3.5",
     "yargs": "^15.3.1"
   },

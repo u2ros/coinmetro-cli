@@ -12,19 +12,20 @@ if (argv._.length == 0) {
   process.exit(1)
 }
 const command = argv._[0]
-const subcommand = argv._[1]
+let subcommand = argv._[1]
 
 auth.check(command, subcommand)
 .then(() => {
   const api = require('../lib/api')(env.val('demo') === 'true')
   let context
   try { context = require(`../lib/${command}.js`) }
-  catch (err) { 
+  catch (err) {
     console.log(err)
     throw `Invalid base command '${command}'`
   }
 
-  if (!context[subcommand]) throw `Invalid subcommand for command '${command}'`
+  if (!context[subcommand]) subcommand = 'default' //try with default command first
+  if (!context[subcommand]) throw `Invalid subcommand for command '${command}: ${subcommand}`
 
   if (argv._[2] === '?') {
     utils.printHelp(context, subcommand)

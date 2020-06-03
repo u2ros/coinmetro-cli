@@ -24,7 +24,6 @@ auth.check(command, subcommand)
     throw `Invalid base command '${command}'`
   }
 
-  if (!context[subcommand]) subcommand = 'default' //try with default command first
   if (!context[subcommand]) throw `Invalid subcommand for command '${command}: ${subcommand}`
 
   if (argv._[2] === '?') {
@@ -46,5 +45,4 @@ auth.check(command, subcommand)
 })
 .catch((err) => {
   console.log(err)
-  process.exit(0)
 })

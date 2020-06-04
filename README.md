@@ -196,7 +196,7 @@ Change to live mode. After activating the live mode, you need to update your log
 
 ### <a name="auth-login"></a> cm auth login
 
-Login to exchange to obtain access token. If successfull, the command will also indicate which mode (demo|live) you are currently using
+Login to exchange to obtain access token. If successful, the command will also indicate which mode (demo|live) you are currently using
 
 ```
     Syntax:

@@ -48,11 +48,27 @@ Using the cmd module, you can store and chain commands for later use like so:
     // Warning: These particular commands will also store your credentials in plain text inside .coinmetro-cli/cmd file inside your home folder, so use with caution!
 ```
 
+Or, for example, if you use 2FA, you can use the same command, with an optional parameter (parameters are specified with %p)
+
+```
+    cm cmd store "cm auth demo && cm auth login myname@blabla.com mypass %p" demo
+    cm cmd store "cm auth live && cm auth login myname@blabla.com mypass %p" live
+
+    // Warning: These particular commands will also store your credentials in plain text inside .coinmetro-cli/cmd file inside your home folder, so use with caution!
+```
+
 To login to either live or demo mode, you can then use:
 
 ```
     cm cmd run demo // this will enable demo mode and log you in as specified in the command definition above
     cm cmd run live // this will enable live mode and log you in as specified in the command definition above
+```
+
+Or in case of enabled 2FA:
+
+```
+    cm cmd run demo 234235 // this will enable demo mode and log you in as specified in the command definition above
+    cm cmd run live 568932 // this will enable live mode and log you in as specified in the command definition above
 ```
 
 You could create a shorthand to overview a specific market with these commands:

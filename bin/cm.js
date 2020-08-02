@@ -24,7 +24,8 @@ auth.check(command, subcommand)
     throw `Invalid base command '${command}'`
   }
 
-  if (!context[subcommand]) throw `Invalid subcommand for command '${command}: ${subcommand}`
+  if (typeof subcommand === 'undefined') subcommand = 'default'
+  if (!context[subcommand]) throw `Invalid subcommand for command '${command}': '${subcommand || ''}'`
 
   if (argv._[2] === '?') {
     utils.printHelp(context, subcommand)

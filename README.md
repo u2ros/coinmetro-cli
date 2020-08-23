@@ -1,5 +1,7 @@
 # Coinmetro-CLI
 
+![Book](./docs/media/cli-usage.gif)
+
 ![Chart](./docs/media/chart.jpg)
 
 ![Book](./docs/media/book.jpg)

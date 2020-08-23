@@ -142,6 +142,10 @@ No particular roadmap atm. There's some due diligence (code cleanup, tests, refa
 
 Here is a list of available commands.
 
+### Quick reference
+
+- [cm ref](#cmd-ref) - prints out this list
+
 ### Authentication and mode
 
 - [cm auth demo](#auth-demo) - activate demo mode
@@ -159,7 +163,7 @@ Here is a list of available commands.
 
 - [cm trade balance](#trade-balance) - list your balances
 - [cm trade open](#trade-open) - list open orders
-- [sm trade history](#trade-history) - list filled orders
+- [cm trade history](#trade-history) - list filled orders
 - [cm trade buy](#trade-buy) - place a buy order
 - [cm trade sell](#trade-sell) - place a sell order
 - [cm trade mbuy](#trade-mbuy) - place a multi buy (iceberg) order
@@ -171,7 +175,7 @@ Here is a list of available commands.
 
 - [cm margin balance](#margin-balance) - list your balances and update your collateral
 - [cm margin open](#margin-open) - list open orders
-- [sm margin history](#margin-history) - list filled orders
+- [cm margin history](#margin-history) - list filled orders
 - [cm margin buy](#margin-buy) - place a buy order
 - [cm margin sell](#margin-sell) - place a sell order
 - [cm margin mbuy](#margin-mbuy) - place a multi buy (iceberg) order
@@ -185,6 +189,19 @@ Here is a list of available commands.
 - [cm cmd store](#cmd-store) - store a new command
 - [cm cmd del](#cmd-del) - delete a stored command
 - [cm cmd run](#cmd-run) - run a stored command
+
+### <a name="cmd-ref"></a> cm ref
+
+Print q quick comand reference
+
+```
+    Syntax:
+    cm ref
+
+    Example:
+    cm ref
+    cm ref default
+```
 
 ### <a name="auth-demo"></a> cm auth demo
 

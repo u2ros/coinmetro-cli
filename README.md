@@ -8,7 +8,7 @@
 
 A little side project i made in my spare time (and still a work in progress) for accessing Coinmetro Crypto Exchange using the terminal.
 
-Coinmetro are a transparent, regulations compliant exchange that should appeal to newbies and pros. Visit [coinmetro.com](https://coinmetro.com/) to learn more about the different products they offer.
+Coinmetro are a transparent, regulations compliant exchange that should appeal to newbies and pros. Visit [coinmetro.com](https://coinmetro.com?ref=u2ros) to learn more about the different products they offer.
 
 Please note this is not an official Coinmetro product, it is in early stages, so use at your own risk or use demo mode. The application does not send your credentials to any third party in any way (feel free to examine the source)
 

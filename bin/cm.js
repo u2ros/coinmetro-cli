@@ -13,6 +13,7 @@ if (argv._.length == 0) {
 }
 const command = argv._[0]
 let subcommand = argv._[1]
+if (typeof subcommand === 'undefined') subcommand = 'default'
 
 auth.check(command, subcommand)
 .then(() => {
@@ -24,7 +25,6 @@ auth.check(command, subcommand)
     throw `Invalid base command '${command}'`
   }
 
-  if (typeof subcommand === 'undefined') subcommand = 'default'
   if (!context[subcommand]) throw `Invalid '${command}' subcommand: '${subcommand || ''}'`
 
   if (argv._[2] === '?') {

@@ -21,6 +21,7 @@ If you know how to use git just clone the repository, then install it with npm:
 
 ```
     cd coinmetro-cli
+    npm install
     npm install -g ./
 ```
 

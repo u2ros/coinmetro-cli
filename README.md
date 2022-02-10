@@ -438,8 +438,8 @@ Place a limit multi sell order. Order will be divided into specified number of s
 
 ```
     Example:
-    cm order msell 10000 xcm @0.5-0.6 EUR 10 gtc 10 // sell 10k xcm in range from 0.5 to 0.6 for eur (xcmeur pair), split into 10 chunks, keep the order for 10 seconds
-    cm order msell 1000 eur @12000-13000 3          // sell 1000 eur worth of btc, layered into orders at 12000, 12500 and 13000
+    cm trade msell 10000 xcm @0.5-0.6 EUR 10 gtc 10 // sell 10k xcm in range from 0.5 to 0.6 for eur (xcmeur pair), split into 10 chunks, keep the order for 10 seconds
+    cm trade msell 1000 eur @12000-13000 3          // sell 1000 eur worth of btc, layered into orders at 12000, 12500 and 13000
 ```
 
 ### <a name="trade-cancel"></a> cm trade cancel
